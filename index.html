@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/869/869869.png" />
+  </head>
+  <body>
+    <!-- Search Bar and Date -->
+    <div class="header">
+      <h1 class="date-time" id="date-time"></h1>
+      <div class="search">
+        <input type="text" placeholder="Enter city name" id="search-input" spellcheck="false" />
+        <button id="search-button"><img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search" /></button>
+      </div>
+    </div>
+
+    <!-- Weather Information -->
+    <div class="weather-card" id="weather-card" style="display: none;">
+      <div class="current-weather">
+        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163624.png" class="weather-icon" alt="Weather Icon" id="weather-icon" />
+        <h1 class="temp" id="temp">22°C</h1>
+        <h2 class="city" id="city">Your Location</h2>
+        <div class="details">
+          <div class="col">
+            <img src="https://cdn-icons-png.flaticon.com/512/1146/1146869.png" alt="Humidity Icon" />
+            <div>
+              <p class="humidity" id="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="https://cdn3.iconfinder.com/data/icons/wind-4/512/N_T_938Artboard_1_copy_2-512.png" alt="Wind Icon" />
+            <div>
+              <p class="wind" id="wind">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sunrise Icon" />
+            <div>
+              <p class="sunrise" id="sunrise-time">06:00 AM</p>
+              <p>Sunrise</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sunset Icon" />
+            <div>
+              <p class="sunset" id="sunset-time">07:00 PM</p>
+              <p>Sunset</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Sai Avinash Kumar Y. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
