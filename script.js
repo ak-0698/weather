@@ -57,11 +57,34 @@ function updateWeatherIcon(condition) {
   weatherIcon.src = conditionIcons[condition] || conditionIcons["Clear"];
 }
 
-// Fetch weather based on search
+// Add an event listener for pressing Enter in the search input
+searchInput.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    const city = searchInput.value.trim();
+    if (city) {
+      fetchWeather(city);
+    } else {
+      alert("Please enter a city name.");
+    }
+  }
+});
+
+// Function to refresh the weather data automatically every 15 minutes
+function startWeatherAutoRefresh() {
+  setInterval(() => {
+    const city = searchInput.value.trim();
+    if (city) {
+      fetchWeather(city);
+    }
+  }, 900000); // 900000 ms = 15 minutes
+}
+
+// Fetch weather based on search and start auto-refresh
 searchButton.addEventListener("click", () => {
   const city = searchInput.value.trim();
   if (city) {
     fetchWeather(city);
+    startWeatherAutoRefresh(); // Start auto-refresh after user searches
   } else {
     alert("Please enter a city name.");
   }
